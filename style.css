@@ -1,0 +1,30 @@
+:root {
+    --bg-color: #CAD5E2;
+    --text-color: #000000;
+    --my-color:  #ff0000;
+  }
+  
+  .theme-1 {
+    --bg-color: #77bddb;
+    --text-color: #660000;
+  }
+  
+  .theme-2 {
+    --bg-color: #e4a5f4;
+    --text-color: #006600;
+  }
+  
+  .theme-3 {
+    --bg-color: #b7b7fe;
+    --text-color: #000066;
+  }
+
+
+  body{
+    background-color: var(--bg-color);
+  }
+  
+
+  .hello{
+    color: var(--text-color);
+  }

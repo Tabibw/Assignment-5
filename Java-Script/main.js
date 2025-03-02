@@ -1,6 +1,3 @@
-const goToHomePage = document.getElementsByClassName('goToHomePage')
-// const redirectBTN = document.getElementsById('redirectBTN')
-
 // Calander date
 function updateDate() {
     const now = new Date();
@@ -14,12 +11,17 @@ function updateDate() {
 updateDate();
 
 // Redirect to secondery.html page
-redirectBTN.addEventListener('click', function () {
-    window.location.href = 'secondery.html';
+document.getElementById('redirectBTN').addEventListener('click',function(){
+    window.location.href='secondery.html';
 })
 
-// Back to main.html page
-goToHomePage.addEventListener('click', function () {
-    window.location.href = 'main.html';
-    console.log(12365);
+// Theme changing button
+const themeToggleBtn = document.getElementById("theme-toggle");
+const themes = ["theme-1", "theme-2", "theme-3"];
+let currentThemeIndex = 0;
+
+themeToggleBtn.addEventListener("click", () => {
+  document.body.classList.remove(...themes); // Remove previous themes
+  document.body.classList.add(themes[currentThemeIndex]); // Apply new theme
+  currentThemeIndex = (currentThemeIndex + 1) % themes.length; // Cycle through themes
 });

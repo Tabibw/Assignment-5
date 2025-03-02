@@ -7,11 +7,12 @@
     <title>Main DevBoard</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="bg-slate-300 p-6 ">
-    <header class="">
-        <div class="bg-white flex justify-between shadow-md rounded-[20px] items-center p-3">
+    <header class="md:container mx-auto">
+        <div class="bg-white flex justify-between shadow-lg rounded-[20px] items-center p-3">
             <div class="flex">
                 <img class="w-10" src="../assets/logo.png" alt="" srcset="">
                 <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
@@ -19,25 +20,25 @@
             <div class="flex gap-3 items-center">
                 <div class="flex items-center space-x-2 bg-slate-300 rounded-xl p-1.5">
                     <img class="w-6 h-6" src="../assets/checkbox.png" alt="">
-                    <h1 class="text-1xl font-bold">23</h1>
+                    <h1 id="head-sum" class="text-1xl font-bold">23</h1>
                 </div>
-                <button class="w-6 h-6"><img src="../assets/theme-btn.png" alt="" srcset=""></button>
+                <button id="theme-toggle" class="w-6 h-6"><img src="../assets/theme-btn.png" alt="" srcset=""></button>
             </div>
         </div>
     </header>
-    <main class="  rounded-xl">
+    <main class="md:container mx-auto  rounded-xl">
         <section class="grid grid-cols-4 gap-3">
-            <aside class="col-span-3 rounded-xl my-4 p-4 bg-white">
+            <aside class="col-span-3 rounded-xl my-4 p-4 shadow-xl bg-white">
                 <section class="gap-4 justify-between grid grid-cols-6">
-                    <div class="flex p-4 bg-slate-300 gap-2 items-center rounded-xl">
+                    <div class="flex py-4 px-2 bg-slate-300 gap-2 items-center rounded-xl">
                         <img class="w-6 h-6 " src="../assets/checkbox.png" alt="" srcset="">
                         <div>
                             <p class=" font-medium">Task Assigned</p>
-                            <h1 class="font-bold text-2xl">05</h1>
+                            <h1 class="font-bold text-2xl">6</h1>
                         </div>
                     </div>
-                    <button id="redirectBTN" class="col-span-4">
-                        <div class="flex p-4 gap-7 justify-center items-center rounded-xl"
+                    <button id="redirectBTN" class=" col-span-4">
+                        <div class="flex py-6 gap-7 justify-center items-center rounded-xl"
                             style="background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250) 52.66%,rgb(155, 168, 248) 99.733%);">
                             <img class="w-16 h-16" src="../assets/board.png" alt="" srcset="">
                             <div class="">
@@ -47,7 +48,7 @@
                         </div>
                     </button>
 
-                    <div class="date-card text-xl p-4 font-semibold flex gap-3 bg-slate-300 items-center rounded-xl">
+                    <div class="date-card text-xl py-4 px-2 font-semibold flex gap-3 bg-slate-300 items-center rounded-xl">
                         <div class="icon">
                             <img class="w-6 h-6" src="../assets/calender.png" alt="">
                         </div>
@@ -60,7 +61,7 @@
 
                 <section class="grid grid-cols-3 gap-5 grid-rows-2 my-5">
 
-                    <div class="bg-slate-300 p-3 rounded-xl space-y-4">
+                    <div id="card-btn-1" class="bg-slate-300 p-3 rounded-xl space-y-4">
                         <button class="btn font-bold rounded-lg">ShowEase</button>
                         <h1 class="text-2xl font-bold">Fix Mobile Button Issue </h1>
                         <p class="bg-white text-gray-400 rounded-xl p-2">Debug using Chrome DevTools, check for
@@ -71,10 +72,10 @@
                                 <h3 class="text-gray-600 font-medium">Deadline</h3>
                                 <p class="text-lg font-semibold">21 March 2025</p>
                             </div>
-                            <button class="btn bg-blue-600 text-white border-none">Completed</button>
+                            <button id="card-btn-1" class="btn bg-blue-600 text-white border-none">Completed</button>
                         </div>
                     </div>
-                    <div class="bg-slate-300 p-3 rounded-xl space-y-4">
+                    <div id="card-btn-2" class="bg-slate-300 p-3 rounded-xl space-y-4">
                         <button class="btn font-bold rounded-lg">CloudSync</button>
                         <h1 class="text-2xl font-bold">Add Dark Mode </h1>
                         <p class="bg-white text-gray-400 rounded-xl p-2">Debug using Chrome DevTools, check for
@@ -88,7 +89,7 @@
                             <button class="btn bg-blue-600 text-white border-none">Completed</button>
                         </div>
                     </div>
-                    <div class="bg-slate-300 p-3 rounded-xl space-y-4">
+                    <div id="card-btn-3" class="bg-slate-300 p-3 rounded-xl space-y-4">
                         <button class="btn font-bold rounded-lg">SwiftPay</button>
                         <h1 class="text-2xl font-bold">Optimize  Home page</h1>
                         <p class="bg-white text-gray-400 rounded-xl p-2">Debug using Chrome DevTools, check for
@@ -102,7 +103,7 @@
                             <button class="btn bg-blue-600 text-white border-none">Completed</button>
                         </div>
                     </div>
-                    <div class="bg-slate-300 p-3 rounded-xl space-y-4">
+                    <div id="card-btn-4" class="bg-slate-300 p-3 rounded-xl space-y-4">
                         <button class="btn font-bold rounded-lg">Meta</button>
                         <h1 class="text-2xl font-bold">Add new emoji 🤲</h1>
                         <p class="bg-white text-gray-400 rounded-xl p-2">Debug using Chrome DevTools, check for
@@ -116,7 +117,7 @@
                             <button class="btn bg-blue-600 text-white border-none">Completed</button>
                         </div>
                     </div>
-                    <div class="bg-slate-300 p-3 rounded-xl space-y-4">
+                    <div id="card-btn-5" class="bg-slate-300 p-3 rounded-xl space-y-4">
                         <button class="btn font-bold rounded-lg">Google LLC</button>
                         <h1 class="text-2xl font-bold">Integrate OpenAI API </h1>
                         <p class="bg-white text-gray-400 rounded-xl p-2">Debug using Chrome DevTools, check for
@@ -130,7 +131,7 @@
                             <button class="btn bg-blue-600 text-white border-none">Completed</button>
                         </div>
                     </div>
-                    <div class="bg-slate-300 p-3 rounded-xl space-y-4">
+                    <div id="card-btn-6" class="bg-slate-300 p-3 rounded-xl space-y-4">
                         <button class="btn font-bold rounded-lg">Glassdoar</button>
                         <h1 class="text-2xl font-bold">Improve Job searching </h1>
                         <p class="bg-white text-gray-400 rounded-xl p-2">Debug using Chrome DevTools, check for
@@ -141,26 +142,29 @@
                                 <h3 class="text-gray-600 font-medium">Deadline</h3>
                                 <p class="text-lg font-semibold">21 March 2025</p>
                             </div>
-                            <button class="btn bg-blue-600 text-white border-none">Completed</button>
+                            <button  class="btn bg-blue-600 text-white border-none">Completed</button>
                         </div>
                     </div>
 
                 </section>
             </aside>
-            <aside class="text-center rounded-xl  my-4 p-4 bg-white">
+            <aside class="text-center rounded-xl  my-4 p-4 shadow-xl bg-white">
                 <div class="space-y-3 pb-4 border-b-2 border-dashed border-gray-400">
                     <div class="flex justify-center items-center gap-2">
                         <img class="w-6 h-6" src="../assets/activity.png" alt="">
                         <h1 class="text-lg font-semibold">Activity Log</h1>
                     </div>
-                    <button class="btn btn-primary text-base ">Clear History</button>
+                    <button id="clear-log" class="btn btn-primary text-base ">Clear History</button>
+                </div>
+                <div class="activity-log text-sm flex flex-col-reverse">
+
                 </div>
             </aside>
         </section>
     </main>
 
 
-
+<script src="../Java-Script/cardBtn.js"></script>
     <script src="../Java-Script/main.js"></script>
 </body>
 
