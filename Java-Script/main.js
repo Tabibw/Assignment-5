@@ -21,7 +21,7 @@ const themes = ["theme-1", "theme-2", "theme-3"];
 let currentThemeIndex = 0;
 
 themeToggleBtn.addEventListener("click", () => {
-  document.body.classList.remove(...themes); // Remove previous themes
-  document.body.classList.add(themes[currentThemeIndex]); // Apply new theme
-  currentThemeIndex = (currentThemeIndex + 1) % themes.length; // Cycle through themes
+  document.body.classList.remove(...themes);
+  document.body.classList.add(themes[currentThemeIndex]);
+  currentThemeIndex = (currentThemeIndex + 1) % themes.length; 
 });

@@ -49,6 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     clearLogButton.addEventListener('click', function () {
-        activityLog.innerHTML = '';
+        activityLog.innerHTML = 'All history clear';
     });
 });
