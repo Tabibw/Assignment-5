@@ -10,18 +10,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const buttons = document.querySelectorAll('.btn.bg-blue-600');
 
-    const completedTasksElement = document.getElementById('head-sum'); // Total completed count
-    const taskAssignedElement = document.querySelector('.font-bold.text-2xl'); // Total tasks remaining
-    const activityLog = document.querySelector('.activity-log'); // Activity log container
-    const clearLogButton = document.getElementById('clear-log'); // Clear log button
+    const completedTasksElement = document.getElementById('head-sum'); 
+    const taskAssignedElement = document.querySelector('.font-bold.text-2xl'); 
+    const activityLog = document.querySelector('.activity-log'); 
+    const clearLogButton = document.getElementById('clear-log'); 
 
     buttons.forEach(button => {
         button.addEventListener('click', function () {
             const parentCard = button.closest('div[id]');
-            if (!parentCard) return; // Safety check
+            if (!parentCard) return; 
             
-            const buttonId = parentCard.id; // Get button ID
-            const message = taskMessages[buttonId]; // Get the corresponding message
+            const buttonId = parentCard.id; 
+            const message = taskMessages[buttonId]; 
 
             const now = new Date();
             const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
             completedTasksElement.innerText = completedTasks + 1;
 
             button.disabled = true;
-            button.classList.add('opacity-50', 'cursor-not-allowed'); // Style change for disabled state
+            button.classList.add('opacity-50', 'cursor-not-allowed'); 
 
             if (message) {
                 const logEntry = document.createElement('p');
