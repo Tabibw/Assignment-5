@@ -12,7 +12,7 @@ updateDate();
 
 // Redirect to secondery.html page
 document.getElementById('redirectBTN').addEventListener('click',function(){
-    window.location.href='../HTML/secondery.index.html';
+    window.location.href='./secondery-index.html';
 })
 
 // Theme changing button
